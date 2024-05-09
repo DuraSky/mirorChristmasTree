@@ -1,5 +1,11 @@
 @import "variables";
+@import "_nav";
+@import "_hero";
 
 body {
-  background: $test;
+  font-family: $font;
+  height: 100vh;
+  margin: 0;
+
+  background: linear-gradient(50deg, white 70%, $myblue 30%);
 }

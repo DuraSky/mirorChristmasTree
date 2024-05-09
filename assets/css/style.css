@@ -1,3 +1,75 @@
+.navbar {
+  display: flex;
+}
+.navbar .navbar-brand {
+  font-weight: 600;
+}
+.navbar .search {
+  background-color: #e7f5f6;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 20px;
+}
+.navbar .search input {
+  text-decoration: none;
+  border: none;
+  background-color: #e7f5f6;
+}
+.navbar .search i {
+  font-size: 0.8rem;
+  padding: 5px;
+  background-color: white;
+  border-radius: 150px;
+  height: 10px;
+}
+.navbar .links ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.navbar .links .active {
+  font-weight: bold;
+  color: #db400a;
+}
+.navbar .btnNav {
+  text-decoration: none;
+  background-color: #db400a;
+  outline: none;
+  color: white;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  padding: 5px 20px;
+  border: none;
+}
+
+.hero {
+  margin-top: 100px;
+}
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+}
+.hero .container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero .container .left .textBlock h1 {
+  width: 50%;
+  font-size: 4rem;
+}
+.hero .container .left .textBlock h1 span {
+  font-weight: 300;
+}
+.hero .container .left .textBlock .decorativeText::before, .hero .container .left .textBlock .decorativeText::after {
+  content: "-";
+  margin: 0 5px;
+  transform: translateY(-50%);
+}
+
 body {
-  background: red;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(50deg, white 70%, #e7f5f6 30%);
 }/*# sourceMappingURL=style.css.map */

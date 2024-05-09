@@ -1,0 +1,56 @@
+@import "variables";
+
+// Nav
+.navbar {
+  display: flex;
+
+  .navbar-brand {
+    font-weight: 600;
+  }
+
+  .search {
+    background-color: $myblue;
+    border: none;
+    border-radius: $myRadiusNav;
+    padding: $myPaddingNav;
+
+    input {
+      text-decoration: none;
+      border: none;
+      background-color: $myblue;
+    }
+
+    i {
+      font-size: 0.8rem;
+      padding: 5px;
+      background-color: white;
+      border-radius: 150px;
+      height: 10px;
+    }
+  }
+
+  .links {
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    .active {
+      //docasne reseni bez js, je pouze nastavena staticka classa v html
+      font-weight: bold;
+      color: $myorange;
+    }
+  }
+
+  .btnNav {
+    text-decoration: none;
+    background-color: $myorange;
+    outline: none;
+    color: white;
+    border-radius: $myRadiusNav;
+    font-size: 1.1rem;
+    padding: 5px 20px;
+    border: none;
+  }
+}
