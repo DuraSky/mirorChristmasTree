@@ -1,11 +1,15 @@
 @import "variables";
 @import "_nav";
 @import "_hero";
+@import "_products";
 
 body {
   font-family: $font;
   height: 100vh;
   margin: 0;
-
-  background: linear-gradient(50deg, white 70%, $myblue 30%);
+  background-image: url("/assets/images/img.png"),
+    linear-gradient(50deg, white 70%, $myblue 30%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 10% top 20%;
+  background-size: 30% 60%, auto;
 }

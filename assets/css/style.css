@@ -43,33 +43,144 @@
 }
 
 .hero {
-  margin-top: 100px;
+  margin-bottom: 40px;
 }
 .hero .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 100px;
+  gap: 10px;
 }
 .hero .container .left {
+  width: 80%;
   display: flex;
   flex-direction: column;
+  flex-grow: 0;
   gap: 20px;
 }
 .hero .container .left .textBlock h1 {
-  width: 50%;
+  width: 60%;
   font-size: 4rem;
 }
 .hero .container .left .textBlock h1 span {
   font-weight: 300;
 }
 .hero .container .left .textBlock .decorativeText::before, .hero .container .left .textBlock .decorativeText::after {
-  content: "-";
-  margin: 0 5px;
-  transform: translateY(-50%);
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-image: linear-gradient(60deg, hsl(16, 91%, 45%) 1%, hsl(15, 78%, 53%) 43%, hsl(15, 82%, 60%) 50%, hsl(16, 86%, 66%) 51%, hsl(16, 91%, 72%) 51%, hsl(16, 97%, 78%) 49%, hsl(16, 100%, 84%) 49%, hsl(16, 100%, 89%) 50%, hsl(17, 100%, 94%) 57%, hsl(0, 0%, 100%) 99%);
+  display: inline-block;
+  vertical-align: middle; /* Adjusts vertical alignment to be centered */
+  margin-right: 5px; /* Right margin for before pseudo-element */
+  margin-left: 5px; /* Left margin for after pseudo-element */
+}
+.hero .container .left .countdown {
+  position: relative;
+}
+.hero .container .left .countdown .wrapper {
+  background: #e7f5f6;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+}
+.hero .container .left .countdown .wrapper h4 {
+  font-weight: 300;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.hero .container .left .countdown .wrapper .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 30px;
+}
+.hero .container .left .countdown button {
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #db400a;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+.hero .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 0;
+  margin-right: 100px;
+}
+.hero .right .verified,
+.hero .right .customers {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.hero .right .verified {
+  padding: 20px;
+}
+.hero .right .verified .review {
+  font-weight: bold;
+}
+.hero .right .verified .review i {
+  color: #db400a;
+}
+.hero .right .customers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.hero .right .customers .images {
+  background: white;
+}
+.hero .right .customers img {
+  border-radius: 50%; /* Optional: Makes images circular */
+  margin-left: -20px; /* Negative left margin to overlap images */
+  position: relative;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+.hero .right .customers img:first-child {
+  margin-left: 0px;
+}
+
+.products .container {
+  display: flex;
+  justify-content: space-between;
+}
+.products .container .product img {
+  width: 100%;
+  max-height: 350px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: #e7f5f6;
+  border-top-right-radius: 7%;
+}
+.products .container .product p {
+  text-align: center;
+  color: #db400a;
+  font-weight: bold;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(50deg, white 70%, #e7f5f6 30%);
+  background-image: url("/assets/images/img.png"), linear-gradient(50deg, white 70%, #e7f5f6 30%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 10% top 20%;
+  background-size: 30% 60%, auto;
 }/*# sourceMappingURL=style.css.map */

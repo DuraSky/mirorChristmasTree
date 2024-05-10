@@ -1,21 +1,25 @@
 @import "variables";
 
 .hero {
-  margin-top: 100px;
-
+  margin-bottom: 40px;
   .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 100px;
+    gap: 10px;
 
+    // left side hero
     .left {
+      width: 80%;
       display: flex;
       flex-direction: column;
+      flex-grow: 0;
 
       gap: 20px;
 
       .textBlock {
         h1 {
-          width: 50%;
+          width: 60%;
           font-size: 4rem;
           span {
             font-weight: 300;
@@ -24,10 +28,127 @@
         .decorativeText {
           &::before,
           &::after {
-            content: "-";
-            margin: 0 5px;
-            transform: translateY(-50%);
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-image: linear-gradient(
+              60deg,
+              hsl(16deg 91% 45%) 1%,
+              hsl(15deg 78% 53%) 43%,
+              hsl(15deg 82% 60%) 50%,
+              hsl(16deg 86% 66%) 51%,
+              hsl(16deg 91% 72%) 51%,
+              hsl(16deg 97% 78%) 49%,
+              hsl(16deg 100% 84%) 49%,
+              hsl(16deg 100% 89%) 50%,
+              hsl(17deg 100% 94%) 57%,
+              hsl(0deg 0% 100%) 99%
+            );
+            display: inline-block;
+            vertical-align: middle; /* Adjusts vertical alignment to be centered */
+            margin-right: 5px; /* Right margin for before pseudo-element */
+            margin-left: 5px; /* Left margin for after pseudo-element */
           }
+        }
+      }
+
+      .countdown {
+        position: relative; // Relative positioning for absolute child elements
+        //padding-bottom: 20px; // Extra padding to accommodate the button
+
+        .wrapper {
+          background: $myblue; // Use the variable for background
+          box-shadow: $shadow; // Drop shadow
+          border-radius: $myRadiusNav; // Rounded corners
+
+          h4 {
+            font-weight: 300;
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+            border-top-left-radius: $myRadiusNav;
+            border-top-right-radius: $myRadiusNav;
+          }
+
+          .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+            gap: 30px;
+          }
+        }
+
+        button {
+          position: absolute;
+          left: 50%; // Center the button horizontally
+          bottom: -20px; // Negative value to push button outside the box
+          transform: translateX(
+            -50%
+          ); // Offset by half its width to truly center it
+          padding: 10px 20px;
+          background-color: $myorange; // Button color
+          border: none;
+          border-radius: 20px;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  //right side hero
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0;
+    margin-right: 100px;
+    .verified,
+    .customers {
+      //width: 80%;
+
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .verified {
+      padding: 20px;
+      .review {
+        font-weight: bold;
+        i {
+          color: $myorange;
+        }
+      }
+    }
+
+    .customers {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 20px;
+
+      .images {
+        background: white;
+      }
+
+      img {
+        // margin: 10px; /* Optional: Adds space around each image */
+        border-radius: 50%; /* Optional: Makes images circular */
+        margin-left: -20px; /* Negative left margin to overlap images */
+        position: relative;
+        border: 5px solid rgba(255, 255, 255, 0.5);
+        z-index: 1;
+        &:first-child {
+          margin-left: 0px;
         }
       }
     }

@@ -1,0 +1,22 @@
+.products {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .product {
+      img {
+        width: 100%;
+        max-height: 350px;
+        object-fit: contain;
+        background: $myblue;
+        border-top-right-radius: 7%;
+      }
+
+      p {
+        text-align: center;
+        color: $myorange;
+        font-weight: bold;
+        //border-top-right-radius: 50px;
+      }
+    }
+  }
+}
